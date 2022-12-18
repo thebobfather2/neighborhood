@@ -27,12 +27,13 @@
 <body>
   <header class="pb-3 mb-4 position-relative">
     <div class="d-flex align-items-center">
-      <h1 class="title">Neighborhood</h1>
+      <img src="./Assets/images/carrot.png" alt="Logo" width="230" height="200" class="me-2">
+      <h1 class="display-3 mt-5">Carrot</h1>
     </div>
 
     <nav class="navbar navbar-expand-lg position-absolute top-0 end-0 me-3">
       <div class="container-fluid">
-        <a class="navbar-brand custom" href="index.html">Home <span class="icon"></span></a>
+        <a class="navbar-brand custom" href="index.html">Home <span class="icon">&#128048</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,9 +41,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link custom" href="calendar.html" target="_blank">Calendar</a>
+              <a class="nav-link custom" href="https://www.bobbyrabbits.com/" target="_blank">Bobby Rabbits</a>
             </li>
-            <!-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle custom" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Timezone
@@ -54,7 +55,7 @@
                 <li><a class="dropdown-item" id="inputJP" href="#" onclick="renderJP()">JAPAN</a></li>
                 <li><a class="dropdown-item" id="inputEUR" href="#" onclick="renderEU()">EUR</a></li>
               </ul>
-            </li> -->
+            </li>
             <li class="nav-item">
               <a class="nav-link custom" aria-current="page" href="#" onclick="login()">Join us</a>
             </li>
@@ -62,26 +63,23 @@
         </div>
       </div>
     </nav>
-    <!-- <h2 class="time-display" id="timezone-display"></h2> -->
+    <h2 class="time-display" id="timezone-display"></h2>
+    <br>
   </header>
 
   <br><br>
 
-  <main>
+  <main class="d-flex justify-content-start align-content-stretch flex-nowrap">
+
+    <!-- Calendar -->
+    <div id="calendar" class="card my-3 rounded flex-col"></div>
 
     <!-- Sidebar -->
-    <div id="sidebar" class="welcome">
-
-      <!-- class class="bg-light rounded flex-col position-relative" -->
+    <aside id="sidebar" class="bg-light rounded flex-col position-relative">
 
       <!-- Username and Location -->
-      <!-- <div id="user-area"></div> -->
-    
-
-      <!-- Today's Events -->
-            <div id="todays-events" class="mb-3 border-bottom">
-              <p class="fs-5 p-events">Today's Events</p>
-            </div>
+      <div id="user-area"></div>
+      <hr>
 
       <!-- Current Weather -->
       <div id="curr-weather" class="current-weather">
@@ -91,13 +89,22 @@
         <p class="pl-2 pweather">Humidity: <span id="humidity" class="weatherspan"></span></p>
       </div>
 
+      <!-- Today's Events -->
+      <div id="todays-events" class="mt-4 mb-3 border-bottom">
+        <p class="fs-5 p-events">Today's Events</p>
+      </div>
+      <div>
+        <p class="fs-5">What did the rabbit give his girlfriend?</p>
+        <p>A 14 carat ring!</p>
+      </div>
+
       <!-- Open Modal -->
-      <!-- <button id="event" type="button"
+      <button id="event" type="button"
         class="btn btn-secondary mb-4 position-absolute bottom-0 start-50 translate-middle-x" data-bs-toggle="modal"
         data-bs-target="#carrot-modal">
         Enter an Event!
       </button>
-    </div> -->
+    </aside>
 
     <!-- Enter Events -->
     <div class="time-widget rounded mx-auto">
@@ -145,49 +152,22 @@
 
   </main>
 
-  <div class="emailbox">
-
-</div>
-  <footer>
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="https://gmail.us14.list-manage.com/subscribe/post?u=b03d9109a26cfb0577cdcd37a&amp;id=ea73fb1632&amp;f_id=00f582e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <h4>Join For Neighborhood Updates</h4>
-        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group size1of2">
-	<label for="mce-PHONE">Phone Number </label>
-	<input type="text" name="PHONE" class="" value="" id="mce-PHONE">
-	<span id="mce-PHONE-HELPERTEXT" class="helper_text">Optional: Provide A Phone Number To Receive Text Updates!</span>
-</div>
-	<div id="mce-responses" class="clear foot">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b03d9109a26cfb0577cdcd37a_ea73fb1632" tabindex="-1" value=""></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                <p class="brandingLogo"><a href="http://eepurl.com/igrtMf" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
-            </div>
+  <div class="modal fade" id="carrot-modal" tabindex="-1" aria-labelledby="carrot-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title fs-5" id="carrot-label">Hello Rabbit</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          Grab a &#129365
+        </div>
+      </div>
     </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+  </div>
+
+  <footer>
+    <p> Made with &#129365 by Rabbits </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>

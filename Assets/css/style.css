@@ -1,8 +1,8 @@
 :root {
     --dark-shades: #080603;
-    --dark-accent: #EC4803;
-    --main-brand: #F37335;
-    --light-accent: #FDC830;
+    --dark-accent: #0075ce;
+    --main-brand: #63b4fa;
+    --light-accent: hsl(199, 100%, 85%);
     --light-shades: #F8F4EC;
     --gradient: linear-gradient(to right, var(--main-brand), var(--light-accent), var(--dark-accent));
 }
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    height: 28vh;
+    height: 15vh;
 }
 
 h1 {
@@ -37,9 +37,13 @@ h1,
 h3,
 #week-day,
 aside p,
-.current-weather,
 footer p {
     font-family: 'Eagle Lake', cursive;
+}
+
+.current-weather {
+    border-radius: 15px !important;
+    padding: 10px !important;
 }
 
 h2 {
@@ -274,6 +278,10 @@ td p {
 }
 
 footer {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
 }
 
@@ -283,4 +291,26 @@ footer p {
     text-align: center;
     letter-spacing: 0.2rem;
     text-shadow: 2px 2px var(--main-brand);
+}
+
+.title {
+    justify-content: center;
+    padding: 20px;
+}
+.welcome {
+    background-color: #7a7a7a40;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-color: #080603;
+    border-style: double;
+    border-width: 5px;
+    box-shadow: 10px 10px #00000050;
+    margin-left: 200px;
+    width: 1000px;
+}
+
+.emailbox {
+margin-left: 200px;
 }

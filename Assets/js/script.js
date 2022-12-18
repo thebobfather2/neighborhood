@@ -506,8 +506,9 @@ function renderEU() {
 // Weather
 var apiKey = "1621a5fb00df3e233c5aa1c741011fd3";
 var weatherCity = userStorage[0].city;
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + weatherCity + "&units=imperial&appid=" + apiKey;
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + "Atlanta" + "&units=imperial&appid=" + apiKey;
 
+console.log(weatherCity)
 function weatherData() {
     fetch(queryURL)
         .then(function (response) {
@@ -523,15 +524,15 @@ function renderCurrWeather(weatherData) {
     var weather = weatherData.weather[0];
     var mainInfo = weatherData.main;
 
-    var weatherIconEl = $("<img>");
-    weatherIconEl.attr('id', 'weather-icon');
-    weatherIconEl.attr('alt', 'weather icon');
-    $("#curr-weather").append(weatherIconEl);
+    // var weatherIconEl = $("<img>");
+    // weatherIconEl.attr('id', 'weather-icon');
+    // weatherIconEl.attr('alt', 'weather icon');
+    // $("#curr-weather").append(weatherIconEl);
 
-    var icon = weather.icon;
-    var iconURL = "https://openweathermap.org/img/w/" + icon + ".png";
-    var weatherIcon = $('#weather-icon');
-    weatherIcon.attr("src", iconURL);
+    // var icon = weather.icon;
+    // var iconURL = "https://openweathermap.org/img/w/" + icon + ".png";
+    // var weatherIcon = $('#weather-icon');
+    // weatherIcon.attr("src", iconURL);
 
     var description = $("#description");
     description.html(weather.main);
